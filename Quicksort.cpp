@@ -27,12 +27,13 @@ void displaySort(int highlightIndex, const std::vector<int>& arr)
 
     EndDrawing();
 
-   
     std::this_thread::sleep_for(std::chrono::milliseconds(10));
+    
 }
 
 int partition(std::vector<int>& arr, int start, int end)
 {
+    
     int pivot = arr[end];
     int i = start - 1;
 
@@ -54,6 +55,7 @@ int partition(std::vector<int>& arr, int start, int end)
 
 void quickSort(std::vector<int>& arr, int start, int end)
 {
+    
     if (end <= start) return;
 
     int pivot = partition(arr, start, end);
@@ -76,7 +78,7 @@ int main()
         array.push_back(dist(rng));
     }
 
-    InitWindow(1200, 1200, "Quicksort Visualization");
+    InitWindow(1500, 1200, "Quicksort Visualization");
 
    
     quickSort(array, 0, ARRAY_SIZE - 1);
